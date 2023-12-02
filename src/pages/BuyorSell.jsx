@@ -1,40 +1,11 @@
-import React, { useState } from 'react'
-import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal'
 
-import Swal from 'sweetalert2';
 import Addpro from '../components/Addpro';
 
-function BuyorSell() {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [addstatus,Setaddstatus] = useState({})
-
-  const handleClick=()=>{
-    Swal.fire({
-      title: "Are you Sure?",
-     
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Add!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "Added!",
-          text: "Your have Successfully Added.",
-          icon: "success"
-        });
-      }
-    });
-  }
-  
+function BuyorSell() { 
   return (
     <div>   
 <div className='container'>
@@ -59,7 +30,7 @@ function BuyorSell() {
          We can give you an option to sell your items.Also we will find prospective buyers for you.
         </Card.Text>
         <div>
-        <Addpro Setaddstatus={Setaddstatus}/>
+        <Addpro/>
       </div>
        
       </Card.Body>

@@ -11,6 +11,7 @@ function Favorcard({showpro,Setdeletefavors}) {
   const removeproduct = async(id)=>{
     const response = await deletefavorites(id) 
     Setdeletefavors(true)
+    console.log(response);
 
   }
 

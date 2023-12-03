@@ -1,1 +1,1 @@
-export const serverURL = 'http://localhost:9000'
+export const serverURL = 'https://cartify-front-end.vercel.app'
